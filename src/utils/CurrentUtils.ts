@@ -4,6 +4,7 @@ const fetchCurrent = (lat, lon) => {
 };
 const selectCurrent = (data) => {
     const currentData = data
+    console.log(data)
     return {
         main: currentData.weather[0].main,
         desc: currentData.weather[0].description,
@@ -16,6 +17,8 @@ const selectCurrent = (data) => {
         feelsLike: currentData.main.feels_like.toString().slice(0, 4),
         maxTemp: currentData.main.temp_max.toString().slice(0, 4),
         minTemp: currentData.main.temp_min.toString().slice(0, 4),
+        seaLevel: currentData.main.sea_level,
+        grndLevel: currentData.main.grnd_level
     }}
 
 

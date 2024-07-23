@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import WeatherCard from "./WeatherCard";
+import SubHeading from "./SubHeading";
 import Divider from "./Divider";
 import useForeCastHourly from "../utils/useForeCastHourly";
 import { fetch, select } from "../utils/ForeCastHourlyUtils";
@@ -18,12 +19,12 @@ const DayForeCast = ({ coord }) => {
   if (isLoading) return <></>;
   return (
     <div className=" flex flex-col h-full">
-      <h2>TODAY'S WEATHER</h2>
+      <SubHeading>TODAY'S WEATHER</SubHeading>
       <div className="flex flex-col md:flex-row justify-between items-center mt-2 group divider-vertical h-full">
         {data.map((data, ind) => (
           <Fragment key={data.time}>
-            <WeatherCard data={data} responsive />
-            {data.length - 1 !== ind && <Divider />}
+            {ind != 0 && <Divider />}
+            <WeatherCard data={data} />
           </Fragment>
         ))}
       </div>

@@ -25,7 +25,7 @@ const SearchBar = ({ setCoord }) => {
 
   return (
     <form
-      className="w-full h-10 relative z-10"
+      className="w-full h-10 relative z-10 mb-4"
       onSubmit={(e) => e.preventDefault()}
       autoComplete="off"
     >

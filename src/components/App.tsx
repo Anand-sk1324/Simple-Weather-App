@@ -21,7 +21,7 @@ const App = () => {
     }
   );
   return (
-    <main className="text-slate-300 w-full bg-slate-950 max-lg:flex max-lg:flex-col lg:grid lg:grid-rows-layout lg:grid-cols-layout  gap-4 p-4 font-mono max-w-screen-xl mx-auto  ">
+    <main className="max-md:text-sm  text-slate-300 w-full bg-slate-950 max-lg:flex max-lg:flex-col lg:grid lg:grid-rows-layout lg:grid-cols-layout  gap-4 p-4 font-mono max-w-screen-xl mx-auto  ">
       <div className=" lg:col-span-2">
         <SearchBar setCoord={setCoord} />
       </div>

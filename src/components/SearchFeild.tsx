@@ -10,7 +10,7 @@ const SearchFeild = ({ searchText, setSearchText }) => {
       <input
         type="text"
         placeholder="Search for cities..."
-        className=" bg-transparent text-xl outline-none grow placeholder:text-slate-500"
+        className=" lg:text-lg bg-transparent outline-none grow placeholder:text-slate-500"
         id="search"
         value={searchText}
         onChange={(e) => {
