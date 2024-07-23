@@ -9,7 +9,7 @@ const SearchResponse = ({ citiesData, setCoord }) => {
     });
   };
   return (
-    <div className=" hidden peer-focus-within:block hover:block w-full bg-slate-300 mt-2 rounded-2xl py-3 px-2 absolute top-full lg:text-lg">
+    <div className=" hidden peer-focus-within:block hover:block w-full bg-slate-200 mt-2 rounded-2xl py-3 px-2 absolute top-full lg:text-lg">
       {!citiesData ? (
         <div className="text-slate-400">Waiting For Input...</div>
       ) : (
@@ -25,7 +25,7 @@ const SearchResponse = ({ citiesData, setCoord }) => {
                   {cityData.country}
                 </span>
               </button>
-              {citiesData.length - 1 !== ind && <Divider />}
+              <div className=" w-full h-1 bg-slate-300 "></div>
             </Fragment>
           ))}
         </div>

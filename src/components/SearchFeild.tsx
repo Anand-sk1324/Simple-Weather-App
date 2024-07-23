@@ -5,7 +5,7 @@ const SearchFeild = ({ searchText, setSearchText }) => {
   return (
     <label
       htmlFor="search"
-      className=" peer flex justify-between items-center rounded-2xl text-slate-950 px-4 py-2 bg-slate-300 cursor-text"
+      className=" peer flex justify-between items-center rounded-2xl text-slate-950 px-4 py-2 bg-slate-200 cursor-text"
     >
       <input
         type="text"
