@@ -12,7 +12,7 @@ const CurrentAir = ({ data, isLoading }) => {
   return (
     <div className="h-full pb-10">
       <h3>AIR CONDITIONS</h3>
-      <div className="grid  w-full h-full  grid-rows-2 grid-cols-2 md:grid-rows-2 md:grid-cols-3 gap-8 mt-6  ">
+      <div className="grid  w-full h-full grid-rows-6 grid-cols-1 sm:grid-rows-2 sm:grid-cols-2 md:grid-rows-2 md:grid-cols-3 gap-8 mt-6  ">
         <StatusCard
           Icon={<FireIcon width={20} />}
           title="Real Feel"
