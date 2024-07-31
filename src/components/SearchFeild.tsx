@@ -1,7 +1,21 @@
 import React from "react";
 import { MagnifyingGlassIcon } from "@heroicons/react/16/solid";
 
-const SearchFeild = ({ searchText, setSearchText }) => {
+const SearchFeild = ({
+  searchText,
+  setSearchText,
+  isResponseOpen,
+  setIsResponseOpen,
+}) => {
+  const handleOnChange = (e) => {
+    if (e.target.value === "") setIsResponseOpen(false);
+    if (e.target.value !== "") setIsResponseOpen(true);
+    setSearchText(e.target.value);
+  };
+  const toggleIsResponseOpen = () => {
+    if (isResponseOpen) setIsResponseOpen(false);
+    else setIsResponseOpen(true);
+  };
   return (
     <label
       htmlFor="search"
@@ -14,8 +28,9 @@ const SearchFeild = ({ searchText, setSearchText }) => {
         id="search"
         value={searchText}
         onChange={(e) => {
-          setSearchText(e.target.value);
+          handleOnChange(e);
         }}
+        onClick={toggleIsResponseOpen}
         autoComplete="off"
       />
 

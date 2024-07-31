@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
 
-const CurrentWeather = ({ data, isLoading }) => {
+const CurrentWeather = ({ data, isLoading, cityName }) => {
   if (isLoading) return <></>;
   return (
     <div className=" flex justify-between items-center px-4 md:px-10 h-full gap-6 ">
       <div>
+        <h4 className=" text-lg md:text-xl xl:text-2xl text-slate-700 mb-2">
+          {cityName}
+        </h4>
         <h2 className=" text-2xl md:text-3xl xl:text-4xl font-bold text-slate-300">
           {data.main}
         </h2>
-        <h5 className=" xl:text-lg text-slate-500 mb-4 text-nowrap">
+        <h5 className=" xl:text-lg text-slate-400 mb-4 text-nowrap">
           {data.desc}
         </h5>
         <h3 className=" text-3xl md:text-4xl xl:text-5xl font-extrabold text-slate-200">
