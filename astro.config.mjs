@@ -7,6 +7,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [react(), tailwind()],
   
-  site: 'https://WeatherApp.github.io',
-  base: 'app',
+  site: 'https://anand-sk1324.github.io/WeatherApp/',
 });
